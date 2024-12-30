@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.width {
+  max-width: 100rem;
+  margin: 0 auto;
+  width: 92%;
+}
+
+// header
+.header {
+  background: linear-gradient(
+    45deg,
+    #b4382f,
+    #94371d,
+    #efac07,
+    #fbd443,
+    #b4382f,
+    #94371d
+  );
+  color: #000;
+  padding: 1.2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .width {
+    position: relative;
+  }
+
+  h1 {
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  a {
+    color: black;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sign-out-btn {
+    background-color: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-right: 20px;
+    margin-top: 8px;
+  }
+  
+  .sign-out-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .sign-out-btn:hover {
+    opacity: 0.7;
+  }
+}
+
+// search bar
+.home-search {
+  padding: 2.5rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  input {
+    border: 1px solid #ddd;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    line-height: 3rem;
+  }
+}
+
+.home-coins {
+  padding-bottom: 4rem;
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.home-search-input {
+  position: relative;
+
+  &.searching svg {
+    opacity: 1;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    animation: 2s rotating infinite linear;
+    transition: 0.2s opacity;
+    opacity: 0;
+  }
+}
+
+.home-coin-list {
+  border-top: 1px solid #ddd;
+}
+
+.home-coin {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.home-coin-img {
+  width: 3rem;
+  height: auto;
+}
+
+.home-coin-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.home-coin-btc {
+  img {
+    width: 1rem;
+    display: inline-block;
+    margin: 10px 5px 0 0;
+  }
+
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.home-coin-usd {
+  color: #111;
+  font-size: 1.2rem;
+}
+
+.show-header {
+  padding: 2.5rem 0;
+  text-align: center;
+
+  img {
+    width: 5rem;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+.show-graph {
+  width: 100%;
+  height: 15rem;
+}
+
+.show-details {
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.show-details-lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+
+  h3 {
+    font-size: 1rem;
+    color: #111;
+  }
+}
+
+//register
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Arial", sans-serif;
+  color: #000;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    input {
+      height: 40px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.9rem;
+
+      &:focus {
+        outline: none;
+        border-color: #000;
+      }
+    }
+
+    .signin-link {
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+
+      .link {
+        color: #efac07;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .register-button {
+      height: 40px;
+      background-color: #f3c82e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #efac07;
+      }
+    }
+  }
+}
+
+// login
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fff;
+  font-family: "Arial", sans-serif;
+  color: #000;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    input {
+      height: 40px;
+      padding: 0 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.9rem;
+
+      &:focus {
+        outline: none;
+        border-color: #000;
+      }
+    }
+
+    .signup-link {
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      text-align: center;
+
+      .link {
+        color: #efac07;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .login-button {
+      height: 40px;
+      background-color: #f3c82e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #efac07;
+      }
+    }
+  }
+}
